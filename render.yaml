@@ -6,11 +6,11 @@ databases:
 
 services:
   - type: web
-    name: mysite
+    name: myProj
     plan: free
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn mysite.wsgi:application"
+    startCommand: "gunicorn myProj.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
